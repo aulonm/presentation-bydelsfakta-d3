@@ -2,14 +2,11 @@
   <div id="app">
     <div class="reveal">
       <div class="slides">
-        <section data-notes="test">
-          <h2>Single Horizontal Slide</h2>
-          <aside class="notes">Dette er en test slide</aside>
+        <section data-background-color="#2A2859">
+          <img src="/img/agenda.png" height="100%" width="100%" />
         </section>
-        <section>
-          <section>Vertical Slide 1</section>
-          <section>Vertical Slide 2</section>
-        </section>
+        <who></who>
+        <what></what>
         <page-5></page-5>
       </div>
     </div>
@@ -19,12 +16,14 @@
 <script>
 import Reveal from 'reveal.js';
 import Page5 from './views/page5.vue';
+import Who from './views/Who.vue';
+import What from './views/What.vue';
 
 export default {
   name: 'app',
-  components: { Page5 },
+  components: { Page5, Who, What },
   mounted() {
-    Reveal.initialize();
+    Reveal.initialize({});
   },
 };
 </script>
@@ -38,7 +37,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #2a2859;
   height: 100vh;
 }
 </style>
