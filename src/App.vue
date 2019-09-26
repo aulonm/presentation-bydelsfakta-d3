@@ -3,7 +3,7 @@
     <div class="reveal">
       <div class="slides">
         <section data-background-color="#2A2859">
-          <img src="/img/agenda.png" height="100%" width="100%" />
+          <img :src="getUrl('/img/agenda.png')" height="100%" width="100%" />
         </section>
         <who></who>
         <what></what>
@@ -18,12 +18,20 @@ import Reveal from 'reveal.js';
 import Page5 from './views/page5.vue';
 import Who from './views/Who.vue';
 import What from './views/What.vue';
+import API from './util/config';
 
 export default {
   name: 'app',
   components: { Page5, Who, What },
   mounted() {
-    Reveal.initialize({});
+    Reveal.initialize({
+      viewDistance: 100,
+    });
+  },
+  methods: {
+    getUrl(url) {
+      return `${API()}${url}`;
+    },
   },
 };
 </script>
