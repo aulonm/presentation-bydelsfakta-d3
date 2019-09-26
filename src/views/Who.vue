@@ -1,6 +1,6 @@
 <template>
   <section data-background-color="#2A2859">
-    <img :src="getUrl('/img/hvem-team.png')" height="100%" width="100%" />
+    <img :src="getUrl('/img/2.png')" height="100%" width="100%" />
   </section>
 </template>
 

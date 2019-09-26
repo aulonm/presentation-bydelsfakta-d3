@@ -3,11 +3,13 @@
     <div class="reveal">
       <div class="slides">
         <section data-background-color="#2A2859">
-          <img :src="getUrl('/img/agenda.png')" height="100%" width="100%" />
+          <img :src="getUrl('/img/1.png')" height="100%" width="100%" />
         </section>
         <who></who>
         <what></what>
-        <page-5></page-5>
+        <why></why>
+        <design-process></design-process>
+        <demo></demo>
       </div>
     </div>
   </div>
@@ -15,14 +17,16 @@
 
 <script>
 import Reveal from 'reveal.js';
-import Page5 from './views/page5.vue';
 import Who from './views/Who.vue';
 import What from './views/What.vue';
+import Why from './views/Why.vue';
+import DesignProcess from './views/DesignProcess.vue';
+import Demo from './views/Demo.vue';
 import API from './util/config';
 
 export default {
   name: 'app',
-  components: { Page5, Who, What },
+  components: { Who, What, Why, DesignProcess, Demo },
   mounted() {
     Reveal.initialize({
       viewDistance: 100,
