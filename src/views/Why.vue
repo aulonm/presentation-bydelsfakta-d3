@@ -1,13 +1,13 @@
 <template>
   <div class="slides">
     <section data-background-color="#2A2859">
-      <section data-background-color="#2A2859">
+      <section data-background-color="#2A2859" data-transition="none">
         <img :src="getUrl('/img/4.png')" height="100%" width="100%" />
       </section>
-      <section data-background-color="#2A2859">
+      <section data-background-color="#2A2859" data-transition="none">
         <img :src="getUrl('/img/4-1.png')" height="100%" width="100%" />
       </section>
-      <section data-background-color="#2A2859">
+      <section data-background-color="#2A2859" data-transition="none">
         <img :src="getUrl('/img/4-2.png')" height="100%" width="100%" />
       </section>
     </section>
