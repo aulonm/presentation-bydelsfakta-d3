@@ -52,4 +52,10 @@ export default {
   color: #2a2859;
   height: 100vh;
 }
+
+.reveal section img {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
 </style>
