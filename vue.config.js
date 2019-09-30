@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: '/praha-presentation/',
+  publicPath: '/presentation-bydelsfakta-d3/',
   outputDir: 'docs',
 };
