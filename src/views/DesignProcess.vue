@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section data-background-transition="none">
     <section data-background-color="#2A2859" data-transition="none" data-background-transition="none">
       <img :src="getUrl('/img/7.png')" height="100%" width="100%" />
     </section>

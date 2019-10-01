@@ -1,0 +1,90 @@
+{
+  "district": "Bydel Gamle Oslo",
+  "id": "01",
+  "data": [
+    {
+      "id": "0102",
+      "geography": "Grønland",
+      "values": [{ "value": 73069.0, "date": 2018 }],
+      "avgRow": false,
+      "totalRow": false
+    },
+    {
+      "id": "0103",
+      "geography": "Enerhaugen",
+      "values": [{ "value": 72798.0, "date": 2018 }],
+      "avgRow": false,
+      "totalRow": false
+    },
+    {
+      "id": "0104",
+      "geography": "Nedre Tøyen",
+      "values": [{ "value": 74062.0, "date": 2018 }],
+      "avgRow": false,
+      "totalRow": false
+    },
+    {
+      "id": "0105",
+      "geography": "Kampen",
+      "values": [{ "value": 77242.0, "date": 2018 }],
+      "avgRow": false,
+      "totalRow": false
+    },
+    {
+      "id": "0106",
+      "geography": "Vålerenga",
+      "values": [{ "value": 74682.0, "date": 2018 }],
+      "avgRow": false,
+      "totalRow": false
+    },
+    {
+      "id": "0108",
+      "geography": "Kværnerbyen",
+      "values": [{ "value": 74889.0, "date": 2018 }],
+      "avgRow": false,
+      "totalRow": false
+    },
+    {
+      "id": "0109",
+      "geography": "Bispevika",
+      "values": [{ "value": 100125.0, "date": 2018 }],
+      "avgRow": false,
+      "totalRow": false
+    },
+    {
+      "id": "0110",
+      "geography": "Ensjø",
+      "values": [{ "value": 68693.0, "date": 2018 }],
+      "avgRow": false,
+      "totalRow": false
+    },
+    {
+      "id": "0111",
+      "geography": "Etterstad",
+      "values": [{ "value": 67441.0, "date": 2018 }],
+      "avgRow": false,
+      "totalRow": false
+    },
+    {
+      "id": "01",
+      "geography": "Bydel Gamle Oslo",
+      "values": [{ "value": 74616.0, "date": 2018 }],
+      "avgRow": true,
+      "totalRow": false
+    },
+    {
+      "id": "00",
+      "geography": "Oslo i alt",
+      "values": [{ "value": 70993.0, "date": 2018 }],
+      "avgRow": false,
+      "totalRow": true
+    }
+  ],
+  "meta": {
+    "heading": "Gjennomsnittpris (kr) pr kvm for blokkleilighet",
+    "series": [{ "heading": "Gjennomsnittpris (kr) pr kvm for blokkleilighet", "subheading": "" }],
+    "publishedDate": "2019-08-29",
+    "help": "Dette er en beskrivelse for hvordan dataene leses",
+    "scope": "bydel"
+  }
+}

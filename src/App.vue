@@ -2,7 +2,7 @@
   <div id="app">
     <div class="reveal">
       <div class="slides">
-        <section data-background-color="#2A2859">
+        <section data-background-color="#2A2859" data-background-transition="none">
           <img :src="getUrl('/img/1.png')" height="100%" width="100%" />
         </section>
         <who></who>
@@ -10,6 +10,7 @@
         <why></why>
         <design-process></design-process>
         <demo></demo>
+        <!--        <graph></graph>-->
       </div>
     </div>
   </div>
@@ -22,11 +23,12 @@ import What from './views/What.vue';
 import Why from './views/Why.vue';
 import DesignProcess from './views/DesignProcess.vue';
 import Demo from './views/Demo.vue';
+import Graph from './views/Graph.vue';
 import API from './util/config';
 
 export default {
   name: 'app',
-  components: { Who, What, Why, DesignProcess, Demo },
+  components: { Who, What, Why, DesignProcess, Demo, Graph },
   mounted() {
     Reveal.initialize({
       viewDistance: 100,
