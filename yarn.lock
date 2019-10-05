@@ -7152,6 +7152,11 @@ reveal.js@^3.8.0:
   resolved "https://registry.yarnpkg.com/reveal.js/-/reveal.js-3.8.0.tgz#9a2818e366d46237f0e64c00f50a05f2340cd50f"
   integrity sha512-MQ+UBXIIL9IyBXhkLZWb/AG5h5/BedmnHXHIEavMBawNLVfAayvTrwNlDjGn4tf/CQ2CTJR8jSyIdu4RpfoLpg==
 
+reveald3@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/reveald3/-/reveald3-1.5.4.tgz#6616b42c14b1f922f77ca940aea5de5c61b84e4c"
+  integrity sha512-jvZQWgXAC4sygIMy+tvaEz/9UObm/NVZvAY8QLpm+T6B5jnRi8NDVt6riLv+fcVx3hpuKewyo/pfT9LV2LqkBQ==
+
 rgb-regex@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/rgb-regex/-/rgb-regex-1.0.1.tgz#c0e0d6882df0e23be254a475e8edd41915feaeb1"

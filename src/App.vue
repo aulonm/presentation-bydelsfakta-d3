@@ -2,6 +2,9 @@
   <div id="app">
     <div class="reveal">
       <div class="slides">
+        <section data-background-color="#2A2859">
+          <h3 style="color: #F9C66B">Hvordan Bydelsfakta ble til & intro til d3</h3>
+        </section>
         <section data-background-color="#2A2859" data-background-transition="none">
           <img :src="getUrl('/img/1.png')" height="100%" width="100%" />
         </section>
@@ -10,7 +13,7 @@
         <why></why>
         <design-process></design-process>
         <demo></demo>
-        <!--        <graph></graph>-->
+        <graph></graph>
       </div>
     </div>
   </div>
@@ -31,7 +34,7 @@ export default {
   components: { Who, What, Why, DesignProcess, Demo, Graph },
   mounted() {
     Reveal.initialize({
-      viewDistance: 100,
+      viewDistance: 1,
     });
   },
   methods: {

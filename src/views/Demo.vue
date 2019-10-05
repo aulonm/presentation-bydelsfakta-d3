@@ -12,12 +12,14 @@
     <section data-background-color="#2A2859" data-transition="none">
       <img :src="getUrl('/img/8-3.png')" height="100%" width="100%" />
     </section>
+    <section data-background-iframe="http://localhost:8080"></section>
     <section data-background-color="#2A2859" data-transition="none">
       <img :src="getUrl('/img/8-4.png')" height="100%" width="100%" />
     </section>
     <section data-background-color="#2A2859" data-transition="none">
       <img :src="getUrl('/img/8-6.png')" height="100%" width="100%" />
     </section>
+    <section data-background-iframe="http://localhost:8080"></section>
     <section data-background-color="#2A2859" data-transition="none">
       <img :src="getUrl('/img/8-7.png')" height="100%" width="100%" />
     </section>
@@ -27,6 +29,7 @@
     <section data-background-color="#2A2859" data-transition="none">
       <img :src="getUrl('/img/8-9.png')" height="100%" width="100%" />
     </section>
+    <section data-background-iframe="http://localhost:8080"></section>
   </section>
 </template>
 
