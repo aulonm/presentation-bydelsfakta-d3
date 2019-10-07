@@ -13,7 +13,7 @@
         <why></why>
         <design-process></design-process>
         <demo></demo>
-        <graph></graph>
+        <examples></examples>
       </div>
     </div>
   </div>
@@ -26,12 +26,12 @@ import What from './views/What.vue';
 import Why from './views/Why.vue';
 import DesignProcess from './views/DesignProcess.vue';
 import Demo from './views/Demo.vue';
-import Graph from './views/Graph.vue';
+import Examples from './views/Examples.vue';
 import API from './util/config';
 
 export default {
   name: 'app',
-  components: { Who, What, Why, DesignProcess, Demo, Graph },
+  components: { Who, What, Why, DesignProcess, Demo, Examples },
   mounted() {
     Reveal.initialize({
       viewDistance: 1,

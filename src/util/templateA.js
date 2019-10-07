@@ -250,7 +250,6 @@ function Template(svg) {
         return 0;
       })
       .attr('x', (d, i) => this.x[i](0));
-
   };
 
   this.setScales = function() {
@@ -351,7 +350,7 @@ function Template(svg) {
 
     columns
       .select('rect.clickTrigger')
-      .style('cursor', () =>  'default')
+      .style('cursor', () => 'default')
       .attr('width', () => {
         return 0;
       })
