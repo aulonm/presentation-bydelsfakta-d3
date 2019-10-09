@@ -1,6 +1,6 @@
 <template>
   <section data-state="stats2">
-    <h6>select/selectAll/node/append/text</h6>
+    <h6>Attributes and styles</h6>
     <div class="container" id="container2">
       <div class="col">
         <vue-code-highlight>{{ code }}</vue-code-highlight>
@@ -31,11 +31,9 @@ export default {
   methods: {
     draw() {
       // hvis vi kjører bare select så får vi en seleciton av diven
-      this.code = "d3.select('#div');";
-      this.div = d3.select('#div2');
-      this.removeHighlightCode();
-      this.addHighlightCode('Selection {_groups: Array(1), _parents: Array(1)}');
-      console.log('hello');
+      this.code = "d3.select('#div').append('svg');";
+      if (d3.select('svg').node()) d3.select('svg').remove();
+      this.div = d3.select('#div2').append('svg');
     },
     steps(index) {
       switch (index) {
@@ -60,90 +58,58 @@ export default {
         case 6:
           this.step6();
           break;
-        case 7:
-          this.step7();
-          break;
         default:
           break;
       }
     },
     step1() {
       // kaller du node metoden så får du selve html koden
-      this.removeHighlightCode();
-      this.code = "d3.select('#div').node()";
-      this.addHighlightCode('<div data-v-0d813084="" id="div" class="col">\n' + '</div>');
+      this.code =
+        "d3.select('#div').append('svg')\n" +
+        "        .attr('height', '50px')\n" +
+        "        .attr('width', '50px')\n" +
+        "        .style('background-color', 'white')";
     },
     step2() {
       // ved å kjøre en append, så kan du legge til andre elementer inne i diven, her en p-element
-      this.removeHighlightCode();
-      const div = d3.select('#div2');
-      this.code = "d3.select('#div')\n" + "        .append('p')\n" + "        .text('new paragraph');";
-      div
-        .append('p')
+      this.div
         .transition()
-        .text('new paragraph');
+        .attr('height', '50px')
+        .attr('width', '50px')
+        .style('background-color', 'white');
     },
     step3() {
-      // kan legge til flere p'er
-      this.removeHighlightCode();
-      const div = d3.select('#div2');
       this.code =
-        '      ' +
-        "        div.append('p').text('new paragraph');\n" +
-        'div' +
-        ".append('p').text('new paragraph');\n" +
-        'div' +
-        ".append('p').text('new paragraph');";
-      div
-        .append('p')
-        .transition()
-        .text('new paragraph');
-      div
-        .append('p')
-        .transition()
-        .text('new paragraph');
+        "d3.select('#div').append('svg')\n" + "        .attr('height', '200px')\n" + "        .attr('width', '200px')";
     },
     step4() {
       // fjern alle p'ene
-      this.code = "d3.selectAll('p').remove();";
+      this.div
+        .transition()
+        .attr('height', '200px')
+        .attr('width', '200px')
+        .style('background-color', 'white');
     },
     step5() {
       // faktisk fjerning
-      d3.selectAll('p').remove();
+      this.code = "d3.select('#div').append('svg')\n" + "        .style('background-color', 'blue')";
     },
     step6() {
       // bruk data for å legge til flere p'er
-      this.code =
-        "const data = ['Praha', '2019'];\n" +
-        "const div = d3.select('#div');\n" +
-        'div\n' +
-        "    .selectAll('p')\n" +
-        '    .data(data)\n' +
-        "    .join('p')\n" +
-        '    .text(d => d);';
-    },
-    step7() {
-      // faktisk legg til alle p'ene
-      const data = ['Praha', '2019'];
-      const div = d3.select('#div2');
-      div
-        .selectAll('p')
-        .data(data)
-        .join('p')
-        .text(d => d);
+      this.div.transition().style('background-color', 'blue');
     },
     addHighlightCode(code) {
       this.removeHighlightCode();
       const pre = d3
         .select('#div2')
         .append('pre')
-        .attr('id', 'highlight')
+        .attr('id', 'highlight2')
         .attr('class', 'language-javascript');
       pre.append('code').text(() => code);
       console.log(pre);
     },
     removeHighlightCode() {
-      d3.select('#highlight').remove();
+      d3.select('#highlight2').remove();
     },
     nextStep(index) {
       if (index === this.current) {
@@ -153,6 +119,7 @@ export default {
       }
     },
     prevStep(index) {
+      if (this.current === 0) return;
       if (index === this.current) {
         index -= 1;
         this.current = index;

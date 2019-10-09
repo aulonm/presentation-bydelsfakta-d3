@@ -150,6 +150,7 @@ export default {
       }
     },
     prevStep(index) {
+      if (this.current === 0) return;
       if (index === this.current) {
         index -= 1;
         this.current = index;
