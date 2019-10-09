@@ -4,7 +4,7 @@ import store from './store';
 import './plugins/notes';
 
 import './styles/fonts.scss';
-import 'vue-code-highlight/themes/duotone-sea.css';
+import './styles/dracula_2.css';
 
 Vue.config.productionTip = false;
 

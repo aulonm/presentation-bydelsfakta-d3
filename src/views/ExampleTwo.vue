@@ -30,7 +30,6 @@ export default {
   },
   methods: {
     draw() {
-      // hvis vi kjører bare select så får vi en seleciton av diven
       this.code = "d3.select('#div').append('svg');";
       if (d3.select('svg').node()) d3.select('svg').remove();
       this.div = d3.select('#div2').append('svg');
@@ -63,7 +62,6 @@ export default {
       }
     },
     step1() {
-      // kaller du node metoden så får du selve html koden
       this.code =
         "d3.select('#div').append('svg')\n" +
         "        .attr('height', '50px')\n" +
@@ -71,7 +69,6 @@ export default {
         "        .style('background-color', 'white')";
     },
     step2() {
-      // ved å kjøre en append, så kan du legge til andre elementer inne i diven, her en p-element
       this.div
         .transition()
         .attr('height', '50px')
@@ -83,7 +80,6 @@ export default {
         "d3.select('#div').append('svg')\n" + "        .attr('height', '200px')\n" + "        .attr('width', '200px')";
     },
     step4() {
-      // fjern alle p'ene
       this.div
         .transition()
         .attr('height', '200px')
@@ -91,11 +87,9 @@ export default {
         .style('background-color', 'white');
     },
     step5() {
-      // faktisk fjerning
       this.code = "d3.select('#div').append('svg')\n" + "        .style('background-color', 'blue')";
     },
     step6() {
-      // bruk data for å legge til flere p'er
       this.div.transition().style('background-color', 'blue');
     },
     addHighlightCode(code) {
