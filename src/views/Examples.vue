@@ -4,6 +4,7 @@
       <section>
         <example-one></example-one>
         <example-two></example-two>
+        <example-three></example-three>
       </section>
     </div>
   </div>
@@ -12,12 +13,14 @@
 <script>
 import ExampleOne from './ExampleOne';
 import ExampleTwo from './ExampleTwo';
+import ExampleThree from './ExampleThree';
 
 export default {
   name: 'Examples',
   components: {
     ExampleOne,
     ExampleTwo,
+    ExampleThree,
   },
 };
 </script>
