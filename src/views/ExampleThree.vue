@@ -154,25 +154,18 @@ export default {
 
       d3.select('svg').attr('height', () => this.data.length * 20 + 10);
 
-      /*d3.select('svg')
+      let rect = d3
+        .select('svg')
         .selectAll('rect')
         .data(this.data)
-        .exit()
-        .remove();*/
-
-      d3.select('svg')
-        .selectAll('rect')
-        .data(this.data)
-        .enter()
-        .append('rect');
-
-      d3.select('svg')
-        .selectAll('rect')
-        .attr('x', 10)
+        .join(enter => {
+          return enter
+            .append('rect')
+            .attr('x', 10)
+            .style('background-color', 'black');
+        })
         .attr('y', (d, i) => i * 20 + 10)
         .transition()
-        .attr('height', 100)
-        .style('background-color', 'black')
         .attr('height', 10)
         .attr('width', d => d * 2);
     },
