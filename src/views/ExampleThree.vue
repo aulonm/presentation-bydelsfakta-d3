@@ -36,7 +36,7 @@ export default {
         .select('#div3')
         .append('svg')
         .attr('width', 420)
-        .attr('height', 80)
+        .attr('height', 90)
         .style('background-color', 'white');
       this.div = this.svg;
     },
@@ -46,7 +46,7 @@ export default {
         "d3.select('#div')\n" +
         "  .append('svg')\n" +
         "  .attr('width', 420)\n" +
-        "  .attr('height', 80)\n" +
+        "  .attr('height', 90)\n" +
         "  .style('background-color', 'white');";
       this.init();
     },
@@ -88,6 +88,15 @@ export default {
         case 11:
           this.step11();
           break;
+        case 12:
+          this.step12();
+          break;
+        case 13:
+          this.step13();
+          break;
+        case 14:
+          this.step14();
+          break;
         default:
           break;
       }
@@ -98,12 +107,12 @@ export default {
         .select('#div3')
         .append('svg')
         .attr('width', 420)
-        .attr('height', 80)
+        .attr('height', 90)
         .style('background-color', 'white');
       this.svg
         .append('rect')
         .attr('x', 10)
-        .attr('y', 10)
+        .attr('y', 30)
         .transition()
         .attr('height', 15)
         .attr('width', 100)
@@ -111,7 +120,7 @@ export default {
       this.svg
         .append('rect')
         .attr('x', 10)
-        .attr('y', 30)
+        .attr('y', 50)
         .transition()
         .attr('height', 15)
         .attr('width', 45)
@@ -119,7 +128,7 @@ export default {
       this.svg
         .append('rect')
         .attr('x', 10)
-        .attr('y', 50)
+        .attr('y', 70)
         .transition()
         .attr('height', 15)
         .attr('width', 123)
@@ -150,7 +159,7 @@ export default {
 
       d3.select('svg')
         .transition()
-        .attr('height', () => this.data.length * 20 + 10);
+        .attr('height', () => this.data.length * 20 + 40);
 
       // før var det enter - update - exit
       // så ble det enter - exit
@@ -197,22 +206,11 @@ export default {
         "d3.select('svg')\n" +
         "  .selectAll('rect')\n" +
         '  .data(datapoints)\n' +
-        '  .join(enter => {\n' +
-        '    return enter\n' +
-        "      .append('rect')\n" +
-        "      .attr('x', 10)\n" +
-        "      .style('background-color', 'black');\n" +
-        '  })\n';
+        "  .join('rect')";
       d3.select('svg')
         .selectAll('rect')
         .data(this.data)
-        .join(enter => {
-          return enter
-            .append('rect')
-            .attr('x', 10)
-            .style('background-color', 'black');
-        });
-      console.log(d3.select('svg').selectAll('rect'));
+        .join('rect');
     },
     step7() {
       this.code =
@@ -220,49 +218,16 @@ export default {
         "d3.select('svg')\n" +
         "  .selectAll('rect')\n" +
         '  .data(datapoints)\n' +
-        '  .join(enter => {\n' +
-        '    return enter\n' +
-        "      .append('rect')\n" +
-        "      .attr('x', 10)\n" +
-        "      .style('background-color', 'black');\n" +
-        '  })\n' +
-        "  .attr('y', (d, i) => i * 20 + 10)\n";
-      d3.select('svg')
-        .selectAll('rect')
-        .data(this.data)
-        .join(enter => {
-          return enter
-            .append('rect')
-            .attr('x', 10)
-            .style('background-color', 'black');
-        })
-        .attr('y', (d, i) => i * 20 + 10);
+        "  .join('rect')\n" +
+        "  .attr('width', d => d * 2 + 10)\n";
     },
     step8() {
-      this.code =
-        'const datapoints = [70, 150, 100, 25, 50];\n\n' +
-        "d3.select('svg')\n" +
-        "  .selectAll('rect')\n" +
-        '  .data(datapoints)\n' +
-        '  .join(enter => {\n' +
-        '    return enter\n' +
-        "      .append('rect')\n" +
-        "      .attr('x', 10)\n" +
-        "      .style('background-color', 'black');\n" +
-        '  })\n' +
-        "  .attr('y', (d, i) => i * 20 + 10)\n" +
-        "  .attr('height', 10)\n";
       d3.select('svg')
         .selectAll('rect')
         .data(this.data)
-        .join(enter => {
-          return enter
-            .append('rect')
-            .attr('x', 10)
-            .style('background-color', 'black');
-        })
-        .attr('y', (d, i) => i * 20 + 10)
-        .attr('height', 10);
+        .join('rect')
+        .transition()
+        .attr('width', d => d * 2);
     },
     step9() {
       this.code =
@@ -270,43 +235,18 @@ export default {
         "d3.select('svg')\n" +
         "  .selectAll('rect')\n" +
         '  .data(datapoints)\n' +
-        '  .join(enter => {\n' +
-        '    return enter\n' +
-        "      .append('rect')\n" +
-        "      .attr('x', 10)\n" +
-        "      .style('background-color', 'black');\n" +
-        '  })\n' +
-        "  .attr('y', (d, i) => i * 20 + 10)\n" +
-        "  .attr('height', 10)\n" +
-        "  .attr('width', d => d * 2)";
+        "  .join('rect')\n" +
+        "  .attr('width', d => d * 2 + 10)\n" +
+        "  .attr('height', 10)\n";
+    },
+    step10() {
       d3.select('svg')
         .selectAll('rect')
         .data(this.data)
-        .join(enter => {
-          return enter
-            .append('rect')
-            .attr('x', 10)
-            .style('background-color', 'black');
-        })
-        .attr('y', (d, i) => i * 20 + 10)
-        .attr('height', 10)
-        .attr('width', d => d * 2);
-    },
-    step10() {
-      this.code =
-        'const datapoints = [70, 150, 100, 25, 50];\n\n' +
-        "d3.select('svg')\n" +
-        "  .selectAll('rect')\n" +
-        '  .data(datapoints)\n' +
-        '  .join(enter => {\n' +
-        '    return enter\n' +
-        "      .append('rect')\n" +
-        "      .attr('x', 10)\n" +
-        "      .style('background-color', 'black');\n" +
-        '  })\n' +
-        "  .attr('y', (d, i) => i * 20 + 10)\n" +
-        "  .attr('height', 10)\n" +
-        "  .attr('width', d => d * 2)";
+        .join('rect')
+        .transition()
+        .attr('width', d => d * 2)
+        .attr('height', 10);
     },
     step11() {
       this.code =
@@ -314,15 +254,43 @@ export default {
         "d3.select('svg')\n" +
         "  .selectAll('rect')\n" +
         '  .data(datapoints)\n' +
-        '  .join(enter => {\n' +
-        '    return enter\n' +
-        "      .append('rect')\n" +
-        "      .attr('x', 10)\n" +
-        "      .style('background-color', 'black');\n" +
-        '  })\n' +
-        "  .attr('y', (d, i) => i * 20 + 10)\n" +
+        "  .join('rect')\n" +
+        "  .attr('width', d => d * 2 + 10)\n" +
         "  .attr('height', 10)\n" +
-        "  .attr('width', d => d * 2)";
+        "  .attr('x', 10)\n";
+    },
+    step12() {
+      d3.select('svg')
+        .selectAll('rect')
+        .data(this.data)
+        .join('rect')
+        .transition()
+        .attr('width', d => d * 2)
+        .attr('height', 10)
+        .attr('x', 10);
+    },
+    step13() {
+      this.code =
+        'const datapoints = [70, 150, 100, 25, 50];\n\n' +
+        "d3.select('svg')\n" +
+        "  .selectAll('rect')\n" +
+        '  .data(datapoints)\n' +
+        "  .join('rect')\n" +
+        "  .attr('width', d => d * 2 + 10)\n" +
+        "  .attr('height', 10)\n" +
+        "  .attr('x', 10)\n" +
+        "  .attr('y', (d, i) => i * 20 + 10)\n";
+    },
+    step14() {
+      d3.select('svg')
+        .selectAll('rect')
+        .data(this.data)
+        .join('rect')
+        .transition()
+        .attr('width', d => d * 2)
+        .attr('height', 10)
+        .attr('x', 10)
+        .attr('y', (d, i) => i * 20 + 10);
     },
     addHighlightCode(code) {
       this.removeHighlightCode();
