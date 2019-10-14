@@ -1,32 +1,27 @@
-import d3 from '@/assets/d3';
+import * as d3 from 'd3';
 
-const body = d3.select('body');
-
-// Creates DOM elements for generic tooltip
-export const showTooltipOver = (str, delay = 0) => {
-  const tooltip = body
+export const showTooltipOver = (str, delay) => {
+  const tooltip = d3
+    .select('body')
     .append('div')
     .attr('class', 'tooltip')
-    .attr('aria-hidden', true)
     .html(str)
     .style('top', '-30px')
-    .style('left', function() {
-      const div = d3
-        .select(this)
-        .node()
-        .getBoundingClientRect().width;
-      return `${div / -2}px`;
-    });
+    .style('left', '-35px');
 
   setTimeout(() => {
     tooltip.classed('showTooltip', true);
   }, delay);
 };
 
-export const showTooltipMove = () => {
-  body.select('div.tooltip').style('transform', `translate(${d3.event.pageX}px, ${d3.event.pageY}px)`);
+export const showTooltipMove = (x, y) => {
+  d3.select('body')
+    .select('div.tooltip')
+    .style('transform', `translate(${x}px, ${y}px)`);
 };
 
 export const hideTooltip = () => {
-  body.select('div.tooltip').remove();
+  d3.select('body')
+    .select('div.tooltip')
+    .remove();
 };

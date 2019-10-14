@@ -1,0 +1,20 @@
+.tooltip {
+  background: #2A2859;
+  border: 1px solid white;
+  border-radius: 4rem;
+  font-size: 20px;
+  color: white;
+  opacity: 0;
+  padding: 0.2rem 0.8rem;
+  pointer-events: none;
+  position: absolute;
+  text-anchor: middle;
+  transform: translate(0, 14);
+  transition: opacity 0.1s;
+  z-index: 10;
+}
+
+.showTooltip {
+  opacity: 1;
+  transition-duration: 0.3s;
+}

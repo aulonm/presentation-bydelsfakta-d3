@@ -5,6 +5,7 @@
         <example-one></example-one>
         <example-two></example-two>
         <example-three></example-three>
+        <example-four></example-four>
       </section>
     </div>
   </div>
@@ -14,6 +15,7 @@
 import ExampleOne from './ExampleOne';
 import ExampleTwo from './ExampleTwo';
 import ExampleThree from './ExampleThree';
+import ExampleFour from './ExampleFour';
 
 export default {
   name: 'Examples',
@@ -21,6 +23,7 @@ export default {
     ExampleOne,
     ExampleTwo,
     ExampleThree,
+    ExampleFour,
   },
 };
 </script>

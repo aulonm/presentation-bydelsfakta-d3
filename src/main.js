@@ -5,6 +5,7 @@ import './plugins/notes';
 
 import './styles/fonts.scss';
 import './styles/dracula_2.css';
+import './styles/layout.scss';
 
 Vue.config.productionTip = false;
 
