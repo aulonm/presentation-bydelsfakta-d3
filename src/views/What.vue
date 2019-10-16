@@ -1,7 +1,7 @@
 <template>
   <section data-background-color="#2A2859" data-background-transition="none">
     <section data-background-color="#2A2859" data-transition="none">
-      <img :src="getUrl('/img/3.png')" height="100%" width="100%" />
+      <img :src="getUrl('/img/hva.png')" height="100%" width="100%" />
     </section>
     <section data-background-color="#2A2859" data-transition="none">
       <img :src="getUrl('/img/3-1.png')" height="100%" width="100%" />
