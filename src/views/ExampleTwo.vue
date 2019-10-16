@@ -63,10 +63,11 @@ export default {
     },
     step1() {
       this.code =
-        "d3.select('#div').append('svg')\n" +
-        "        .attr('height', '50px')\n" +
-        "        .attr('width', '50px')\n" +
-        "        .style('background-color', 'white')";
+        "d3.select('#div')\n" +
+        "  .append('svg')\n" +
+        "  .attr('height', '50px')\n" +
+        "  .attr('width', '50px')\n" +
+        "  .style('background-color', 'white')";
     },
     step2() {
       this.div
@@ -77,7 +78,7 @@ export default {
     },
     step3() {
       this.code =
-        "d3.select('#div').append('svg')\n" + "        .attr('height', '200px')\n" + "        .attr('width', '200px')";
+        "d3.select('#div)\n" + "  .append('svg')\n" + "  .attr('height', '200px')\n" + "  .attr('width', '200px')";
     },
     step4() {
       this.div
@@ -87,7 +88,7 @@ export default {
         .style('background-color', 'white');
     },
     step5() {
-      this.code = "d3.select('#div').append('svg')\n" + "        .style('background-color', 'blue')";
+      this.code = "d3.select('#div')\n" + '' + "  .append('svg')\n" + "  .style('background-color', 'blue')";
     },
     step6() {
       this.div.transition().style('background-color', 'blue');

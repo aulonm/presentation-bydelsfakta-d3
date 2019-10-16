@@ -31,7 +31,7 @@ export default {
   methods: {
     draw() {
       // hvis vi kjører bare select så får vi en seleciton av diven
-      this.code = "d3.select('#div');";
+      this.code = "d3.select('#div')";
       this.div = d3.select('#div');
       this.removeHighlightCode();
       this.addHighlightCode('Selection {_groups: Array(1), _parents: Array(1)}');
@@ -69,14 +69,14 @@ export default {
     step1() {
       // kaller du node metoden så får du selve html koden
       this.removeHighlightCode();
-      this.code = "d3.select('#div').node()";
+      this.code = "d3.select('#div')\n  .node()";
       this.addHighlightCode('<div data-v-0d813084="" id="div" class="col">\n' + '</div>');
     },
     step2() {
       // ved å kjøre en append, så kan du legge til andre elementer inne i diven, her en p-element
       this.removeHighlightCode();
       const div = d3.select('#div');
-      this.code = "d3.select('#div')\n" + "        .append('p')\n" + "        .text('new paragraph');";
+      this.code = "d3.select('#div')\n" + "  .append('p')\n" + "  .text('new paragraph')";
       div
         .append('p')
         .transition()
@@ -87,8 +87,7 @@ export default {
       this.removeHighlightCode();
       const div = d3.select('#div');
       this.code =
-        '      ' +
-        "        div.append('p').text('new paragraph');\n" +
+        "div.append('p').text('new paragraph');\n" +
         'div' +
         ".append('p').text('new paragraph');\n" +
         'div' +
@@ -115,11 +114,10 @@ export default {
       this.code =
         "const data = ['Praha', '2019'];\n" +
         "const div = d3.select('#div');\n" +
-        'div\n' +
-        "    .selectAll('p')\n" +
-        '    .data(data)\n' +
-        "    .join('p')\n" +
-        '    .text(d => d);';
+        "div.selectAll('p')\n" +
+        '   .data(data)\n' +
+        "   .join('p')\n" +
+        '   .text(d => d);';
     },
     step7() {
       // faktisk legg til alle p'ene
