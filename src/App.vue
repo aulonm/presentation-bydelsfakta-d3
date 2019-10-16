@@ -13,7 +13,9 @@
         <why></why>
         <design-process></design-process>
         <demo></demo>
+        <d3></d3>
         <examples></examples>
+        <credits></credits>
       </div>
     </div>
   </div>
@@ -27,11 +29,13 @@ import Why from './views/Why.vue';
 import DesignProcess from './views/DesignProcess.vue';
 import Demo from './views/Demo.vue';
 import Examples from './views/Examples.vue';
+import D3 from './views/D3.vue';
+import Credits from './views/Credits.vue';
 import API from './util/config';
 
 export default {
   name: 'app',
-  components: { Who, What, Why, DesignProcess, Demo, Examples },
+  components: { Who, What, Why, DesignProcess, Demo, Examples, D3, Credits },
   mounted() {
     Reveal.initialize({
       viewDistance: 1,
