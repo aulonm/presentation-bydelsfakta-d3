@@ -2,9 +2,9 @@
   <div class="reveal">
     <div class="slides">
       <section>
-        <example-one></example-one>
-        <example-two></example-two>
-        <example-three></example-three>
+<!--        <example-one></example-one>-->
+<!--        <example-two></example-two>-->
+<!--        <example-three></example-three>-->
         <example-four></example-four>
       </section>
     </div>
