@@ -4,9 +4,39 @@
       <div class="slides">
         <section data-background-color="#2A2859">
           <h3 style="color: #F9C66B">Hvordan Bydelsfakta ble til & intro til d3</h3>
+          <aside class="notes">
+            <p>
+              Velkommen til min talk om Oslo kommune - Origo sitt Bydelsfakta prosjekt og en liten intro til hva D3js er
+              med ordentlige eksempler.
+            </p>
+            <p>Dette er et prosjekt som skulle modernisere faktaark til Plan og Strategi.</p>
+            <p>Dette er statistikk om alle delbydelene og bydelene i Oslo kommune.</p>
+            <p>
+              Jeg skal vise hva det er seinere i sliden, men vit at det bare er statistikk som har gått fra å være pdfer
+              til og bli en hjemmesider med dynamiske grafer
+            </p>
+          </aside>
         </section>
         <section data-background-color="#2A2859" data-background-transition="none">
           <img :src="getUrl('/img/1.png')" height="100%" width="100%" />
+          <aside class="notes">
+            <p>Agendaen på hva vi skal gjennom før vi går over til D3 er følgende:</p>
+            <ul>
+              <li>
+                Hvam som har jobbet i prosjektet
+              </li>
+              <li>
+                Hva vi faktisk skulle gjøre i dette prosjektet
+              </li>
+              <li>
+                Hvorfor var det nødvendig og hvorfor ville vi egentlig det
+              </li>
+              <li>
+                Hvordan det ble gjort i løpet av et år
+              </li>
+              <li>Og så en liten demo med ekte eksempler</li>
+            </ul>
+          </aside>
         </section>
         <who></who>
         <what></what>

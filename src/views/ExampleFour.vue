@@ -168,31 +168,75 @@ export default {
         "        .join('rect')";
     },
     step3() {
-      this.code += "\n        .attr('width'), d => d.value / 300)";
+      this.code =
+        'const boligpriser = { ... }\n' +
+        'const rect =\n' +
+        "      d3.select('svg')\n" +
+        "        .selectAll('rect')\n" +
+        '        .data(boligpriser)\n' +
+        "        .join('rect')" +
+        "\n        .attr('width'), d => d.value / 300)";
     },
     step4() {
       this.rect.transition().attr('width', d => d.value / 300);
     },
     step5() {
-      this.code += "\n        .attr('height', 20)";
+      this.code =
+        'const boligpriser = { ... }\n' +
+        'const rect =\n' +
+        "      d3.select('svg')\n" +
+        "        .selectAll('rect')\n" +
+        '        .data(boligpriser)\n' +
+        "        .join('rect')" +
+        "\n        .attr('width'), d => d.value / 300)\n        .attr('height', 20)";
     },
     step6() {
       this.rect.transition().attr('height', 20);
     },
     step7() {
-      this.code += "\n        .attr('x', 150);";
+      this.code =
+        'const boligpriser = { ... }\n' +
+        'const rect =\n' +
+        "      d3.select('svg')\n" +
+        "        .selectAll('rect')\n" +
+        '        .data(boligpriser)\n' +
+        "        .join('rect')" +
+        "\n        .attr('width'), d => d.value / 300)\n        .attr('height', 20)" +
+        "\n        .attr('x', 150);";
     },
     step8() {
       this.rect.transition().attr('x', 150);
     },
     step9() {
-      this.code += "\n        .attr('y', (d, i) => i * 30 + 10);";
+      this.code =
+        'const boligpriser = { ... }\n' +
+        'const rect =\n' +
+        "      d3.select('svg')\n" +
+        "        .selectAll('rect')\n" +
+        '        .data(boligpriser)\n' +
+        "        .join('rect')" +
+        "\n        .attr('width'), d => d.value / 300)\n        .attr('height', 20)" +
+        "\n        .attr('x', 150);" +
+        "\n        .attr('y', (d, i) => i * 30 + 10);";
     },
     step10() {
       this.rect.transition().attr('y', (d, i) => i * 30 + 10);
     },
     step11() {
-      this.code += "\nd3.select('svg')\n" + "  .selectAll('text')\n" + '  .data(boligpriser)\n' + "  .join('text');";
+      this.code =
+        'const boligpriser = { ... }\n' +
+        'const rect =\n' +
+        "      d3.select('svg')\n" +
+        "        .selectAll('rect')\n" +
+        '        .data(boligpriser)\n' +
+        "        .join('rect')" +
+        "\n        .attr('width'), d => d.value / 300)\n        .attr('height', 20)" +
+        "\n        .attr('x', 150);" +
+        "\n        .attr('y', (d, i) => i * 30 + 10);" +
+        "\nd3.select('svg')\n" +
+        "  .selectAll('text')\n" +
+        '  .data(boligpriser)\n' +
+        "  .join('text');";
     },
     step12() {
       this.text = d3
@@ -202,31 +246,111 @@ export default {
         .join('text');
     },
     step13() {
-      this.code += '\n  .text(d => d.geography)';
+      this.code =
+        'const boligpriser = { ... }\n' +
+        'const rect =\n' +
+        "      d3.select('svg')\n" +
+        "        .selectAll('rect')\n" +
+        '        .data(boligpriser)\n' +
+        "        .join('rect')" +
+        "\n        .attr('width'), d => d.value / 300)\n        .attr('height', 20)" +
+        "\n        .attr('x', 150);" +
+        "\n        .attr('y', (d, i) => i * 30 + 10);" +
+        "\nd3.select('svg')\n" +
+        "  .selectAll('text')\n" +
+        '  .data(boligpriser)\n' +
+        "  .join('text');" +
+        '\n  .text(d => d.geography)';
     },
     step14() {
       this.text.transition().text(d => d.geography);
     },
     step15() {
-      this.code += "\n  .attr('y', (d, i) => i * 30 + 25)";
+      this.code =
+        'const boligpriser = { ... }\n' +
+        'const rect =\n' +
+        "      d3.select('svg')\n" +
+        "        .selectAll('rect')\n" +
+        '        .data(boligpriser)\n' +
+        "        .join('rect')" +
+        "\n        .attr('width'), d => d.value / 300)\n        .attr('height', 20)" +
+        "\n        .attr('x', 150);" +
+        "\n        .attr('y', (d, i) => i * 30 + 10);" +
+        "\nd3.select('svg')\n" +
+        "  .selectAll('text')\n" +
+        '  .data(boligpriser)\n' +
+        "  .join('text');" +
+        '\n  .text(d => d.geography)' +
+        "\n  .attr('y', (d, i) => i * 30 + 25)";
     },
     step16() {
       this.text.transition().attr('y', (d, i) => i * 30 + 25);
     },
     step17() {
-      this.code += "\n  .attr('font-size', 12)";
+      this.code =
+        'const boligpriser = { ... }\n' +
+        'const rect =\n' +
+        "      d3.select('svg')\n" +
+        "        .selectAll('rect')\n" +
+        '        .data(boligpriser)\n' +
+        "        .join('rect')" +
+        "\n        .attr('width'), d => d.value / 300)\n        .attr('height', 20)" +
+        "\n        .attr('x', 150);" +
+        "\n        .attr('y', (d, i) => i * 30 + 10);" +
+        "\nd3.select('svg')\n" +
+        "  .selectAll('text')\n" +
+        '  .data(boligpriser)\n' +
+        "  .join('text');" +
+        '\n  .text(d => d.geography)' +
+        "\n  .attr('y', (d, i) => i * 30 + 25)" +
+        "\n  .attr('font-size', 12)";
     },
     step18() {
       this.text.transition().attr('font-size', 12);
     },
     step19() {
-      this.code += "\n  .attr('x', 140)";
+      this.code =
+        'const boligpriser = { ... }\n' +
+        'const rect =\n' +
+        "      d3.select('svg')\n" +
+        "        .selectAll('rect')\n" +
+        '        .data(boligpriser)\n' +
+        "        .join('rect')" +
+        "\n        .attr('width'), d => d.value / 300)\n        .attr('height', 20)" +
+        "\n        .attr('x', 150);" +
+        "\n        .attr('y', (d, i) => i * 30 + 10);" +
+        "\nd3.select('svg')\n" +
+        "  .selectAll('text')\n" +
+        '  .data(boligpriser)\n' +
+        "  .join('text');" +
+        '\n  .text(d => d.geography)' +
+        "\n  .attr('y', (d, i) => i * 30 + 25)" +
+        "\n  .attr('font-size', 12)" +
+        "\n  .attr('x', 140)";
     },
     step20() {
       this.text.transition().attr('x', 140);
     },
     step21() {
-      this.code += "\n  .attr('text-anchor', 'end');";
+      this.code =
+        'const boligpriser = { ... }\n' +
+        'const rect =\n' +
+        "      d3.select('svg')\n" +
+        "        .selectAll('rect')\n" +
+        '        .data(boligpriser)\n' +
+        "        .join('rect')" +
+        "\n        .attr('width'), d => d.value / 300)\n        .attr('height', 20)" +
+        "\n        .attr('x', 150);" +
+        "\n        .attr('y', (d, i) => i * 30 + 10);" +
+        "\nd3.select('svg')\n" +
+        "  .selectAll('text')\n" +
+        '  .data(boligpriser)\n' +
+        "  .join('text');" +
+        '\n  .text(d => d.geography)' +
+        "\n  .attr('y', (d, i) => i * 30 + 25)" +
+        "\n  .attr('font-size', 12)" +
+        "\n  .attr('x', 140)" +
+        "\n  .attr('text-anchor', 'end');";
     },
     step22() {
       this.text.transition().attr('text-anchor', 'end');
