@@ -15,11 +15,11 @@
         <li class="fragment">
           D3 is more low level charting
         </li>
-        <li>
+        <li class="fragment">
           Brings data to life using HTML/SVG/CSS
         </li>
-        <li>Full capabilities of modern browsers</li>
-        <li>Transformation, not representation</li>
+        <li class="fragment">Full capabilities of modern browsers</li>
+        <li class="fragment">Transformation, not representation</li>
       </ul>
     </section>
     <section>
