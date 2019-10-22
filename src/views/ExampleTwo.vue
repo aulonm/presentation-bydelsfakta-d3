@@ -78,7 +78,7 @@ export default {
     },
     step3() {
       this.code =
-        "d3.select('#div)\n" + "  .append('svg')\n" + "  .attr('height', '200px')\n" + "  .attr('width', '200px')";
+        "d3.select('#div')\n" + "  .append('svg')\n" + "  .attr('height', '200px')\n" + "  .attr('width', '200px')";
     },
     step4() {
       this.div

@@ -87,10 +87,10 @@ export default {
       this.removeHighlightCode();
       const div = d3.select('#div');
       this.code =
-        "div.append('p').text('new paragraph');\n" +
-        'div' +
+        "d3.select('#div').append('p').text('new paragraph');\n" +
+        "d3.select('#div')" +
         ".append('p').text('new paragraph');\n" +
-        'div' +
+        "d3.select('#div')" +
         ".append('p').text('new paragraph');";
       div
         .append('p')
