@@ -88,6 +88,7 @@ var RevealNotes = (function() {
     /**
      * Posts the current slide data to the notes window
      */
+    // eslint-disable-next-line no-unused-vars
     function post(event) {
       var slideElement = Reveal.getCurrentSlide(),
         notesElement = slideElement.querySelector('aside.notes'),
@@ -156,6 +157,7 @@ var RevealNotes = (function() {
     init: function() {
       if (!/receiver/i.test(window.location.search)) {
         // If the there's a 'notes' query set, open directly
+        // eslint-disable-next-line no-useless-escape
         if (window.location.search.match(/(\?|\&)notes/gi) !== null) {
           openNotes();
         }

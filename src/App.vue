@@ -3,7 +3,7 @@
     <div class="reveal">
       <div class="slides">
         <section data-background-color="#2A2859">
-          <h3 style="color: #F9C66B">Hvordan Bydelsfakta ble til & intro til d3</h3>
+          <h3 style="color: #F9C66B">Bydelsfakta & Intro til D3js</h3>
           <aside class="notes">
             <p>
               Velkommen til min talk om Oslo kommune - Origo sitt Bydelsfakta prosjekt og en liten intro til hva D3js er
