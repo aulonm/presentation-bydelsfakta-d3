@@ -73,6 +73,22 @@
         </li>
       </ul>
     </section>
+    <section>
+      <h4 style="color: #F9C66B">Ting du kan gjøre med D3JS</h4>
+      <ul>
+        <li class="fragment">Geo Projection</li>
+        <li class="fragment">Fetch av data (json, url, csv, dsv etc)</li>
+        <li class="fragment">Axes</li>
+        <li class="fragment">Timers</li>
+        <li class="fragment">Formats</li>
+        <li class="fragment">Transitions</li>
+        <li class="fragment">Color Scheme</li>
+        <li class="fragment">Array manipulation</li>
+        <li class="fragment">Scales</li>
+        <li class="fragment">Animations</li>
+        <li class="fragment">Og helt sinnsykt mye mer..</li>
+      </ul>
+    </section>
   </section>
 </template>
 

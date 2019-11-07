@@ -110,38 +110,6 @@
         </aside>
       </section>
       <section data-background-color="#2A2859" data-background-transition="none" data-transition="none">
-        <img :src="getUrl('/img/6-3.png')" height="100%" width="100%" />
-        <aside class="notes">
-          <p>
-            Det vi fant ut gjennom brukertestene var at innholdet er bra, spesielt analysene er viktige
-          </p>
-        </aside>
-      </section>
-      <section data-background-color="#4D4D4D" data-background-transition="none" data-transition="none">
-        <img :src="getUrl('/img/6-4.png')" height="100%" width="100%" />
-        <aside class="notes">
-          <p>Brukere tar skjermdump av grafene og bruker dem i presentasjoner</p>
-        </aside>
-      </section>
-      <section data-background-color="#044B45" data-background-transition="none" data-transition="none">
-        <img :src="getUrl('/img/6-5.png')" height="100%" width="100%" />
-        <aside class="notes">
-          <p>Brukerne hadde alltids et behov for å sammenligne mellom bydeler</p>
-        </aside>
-      </section>
-      <section data-background-color="#B24236" data-background-transition="none" data-transition="none">
-        <img :src="getUrl('/img/6-6.png')" height="100%" width="100%" />
-        <aside class="notes">
-          <p>Ønsker å se historiske data så det er enklere å se trender</p>
-        </aside>
-      </section>
-      <section data-background-color="#B18151" data-background-transition="none" data-transition="none">
-        <img :src="getUrl('/img/6-7.png')" height="100%" width="100%" />
-        <aside class="notes">
-          <p>Visualisering av dataen på kart hadde vært ypperlig for brukerne</p>
-        </aside>
-      </section>
-      <section data-background-color="#2A2859" data-background-transition="none" data-transition="none">
         <img :src="getUrl('/img/6-8.png')" height="100%" width="100%" />
         <aside class="notes">
           <p>Så det vi fant ut til slutt etter brukertestene og dybdeintervjuene var at:</p>

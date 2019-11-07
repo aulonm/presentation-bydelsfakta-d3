@@ -38,6 +38,22 @@
             </ul>
           </aside>
         </section>
+        <section data-background-color="#2A2859" data-background-transition="none">
+          <div style="display: flex">
+            <div style="flex: 1">
+              <img src="/image.png" widht="100px"/>
+            </div>
+            <div style="flex: 1 1 50%">
+              <ul>
+                <li>Aulon Mujaj</li>
+                <li>Kristiansand - Oslo i 7 år</li>
+                <li>Msc: Informatikk - Sikkerhet</li>
+                <li>2(3) år hos Knowit Objectnet (Oslo)</li>
+                <li>Oslo kommune - VueJS/D3js</li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <who></who>
         <what></what>
         <why></why>
